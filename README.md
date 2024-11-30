@@ -1,6 +1,7 @@
 # Fresh project
 
 This is an example project using ReScript and Fresh.
+You can clone this repo and use it to start creating your own Fresh application using ReScript.
 
 ### Usage
 
