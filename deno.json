@@ -5,7 +5,7 @@
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
     "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "build": "deno run -A dev.ts build",
+    "build": "deno task res:build && deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "res:dev": "rescript -w",
@@ -35,11 +35,19 @@
     "$std/": "https://deno.land/std@0.216.0/",
     "rescript": "npm:rescript@next",
     "@rescript/webapi": "npm:@rescript/webapi@experimental",
-    "@jvlk/rescript-fresh": "npm:@jvlk/rescript-fresh@^0.2.0"
+    "@jvlk/rescript-fresh": "npm:@jvlk/rescript-fresh@^0.4.0"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "nodeModulesDir": "auto"
+  "nodeModulesDir": "auto",
+  "deploy": {
+    "project": "88392f6c-905b-4d2d-9bf8-2f0ced554bfd",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
+  }
 }
