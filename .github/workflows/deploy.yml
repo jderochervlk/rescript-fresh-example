@@ -21,7 +21,7 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       - name: Build step
         run: "deno task build"
@@ -29,8 +29,8 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "joshderoche-rescript-fr-95"
+          project: "rescript-fresh-example"
           entrypoint: "main.ts"
-          root: ""
+          root: "."
           
           
