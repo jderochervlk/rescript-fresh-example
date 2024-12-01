@@ -1,6 +1,3 @@
-// import { make as Counter } from "../islands/Counter.res.js";
-// import { useCount } from './useCount.res.js'
-
 @jsx.component
 let make = () => {
   let count = Signal.useSignal(3)
